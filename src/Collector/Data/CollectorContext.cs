@@ -16,7 +16,7 @@ public class CollectorContext(DbContextOptions<CollectorContext> optionsBuilderO
     public DbSet<Vehicle> Vehicles { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite("Data Source=C:/Users/Uitan Maciel/Documents/Projects/MayTheFourthCollector/src/Collector/maythefourth.db");
+        => optionsBuilder.UseSqlite("Data Source=wwwroot/maythefourth.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         => modelBuilder.ApplyConfigurationsFromAssembly(typeof(CollectorContext).Assembly);
